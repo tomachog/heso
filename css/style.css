@@ -286,6 +286,74 @@ body {
   top: 44px;
 }
 
+.nav-link {
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+.nav-link::after {
+  display: none;
+}
+.nav-link:hover {
+  color: #c1ff72 !important;
+}
+.nav-link:hover svg {
+  stroke: #c1ff72;
+  transform: scale(1.1) translateY(-2px);
+}
+
+.search-heso-form {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  border: 1px solid rgba(193, 255, 114, 0.5);
+  width: 100%;
+  margin: 1rem 0;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 992px) {
+  .search-heso-form {
+    max-width: 450px;
+    margin: 0 2rem;
+  }
+}
+.search-heso-form:focus-within {
+  border-color: #c1ff72;
+  box-shadow: 0 0 12px rgba(193, 255, 114, 0.2);
+}
+.search-heso-form .search-input {
+  flex-grow: 1;
+  background-color: transparent !important;
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  outline: none;
+}
+.search-heso-form .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+.search-heso-form .search-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #000000 inset !important;
+  -webkit-text-fill-color: white !important;
+}
+.search-heso-form .search-btn {
+  background-color: #c1ff72;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-heso-form .search-btn:hover {
+  background-color: white;
+  color: #000000;
+}
+
 footer {
   background-color: #000000;
   color: white;

@@ -80,3 +80,83 @@
     top: $adbar-height;
 }
 
+.nav-link{
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+
+    &::after{
+        display: none;
+    }
+
+
+    &:hover{
+        color: $color-text-primary !important;
+
+        svg{
+            stroke: $color-text-primary;
+            transform: scale(1.1) translateY(-2px);
+        }
+    }
+}
+
+// --- Buscador Estilo HESO ---
+.search-heso-form {
+    display: flex;
+    align-items: center;
+    background-color: $color-black; 
+    border: 1px solid rgba($color-text-primary, 0.5); // Borde verde
+    width: 100%;
+    margin: 1rem 0; 
+    @include transition-standard;
+
+    // Comportamiento en pantallas de PC
+    @media (min-width: 992px) {
+        max-width: 450px; 
+        margin: 0 2rem; 
+    }
+
+    // Efecto neón al hacer clic para escribir
+    &:focus-within {
+        border-color: $color-text-primary;
+        box-shadow: 0 0 12px rgba($color-text-primary, 0.2);
+    }
+
+    .search-input {
+        flex-grow: 1;
+        background-color: transparent !important; // Forzamos a quitar el fondo blanco
+        border: none;
+        color: white; // Texto que escribe el usuario en blanco
+        padding: 0.6rem 1rem;
+        outline: none;
+
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+        
+        // Evita que Chrome le ponga fondo amarillo/blanco al autocompletar
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px $color-black inset !important;
+            -webkit-text-fill-color: white !important;
+        }
+    }
+
+    .search-btn {
+        background-color: $color-text-primary; // Botón verde
+        border: none;
+        padding: 0.6rem 1.2rem;
+        color: $color-black; // Lupa negra
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: white;
+            color: $color-black;
+        }
+    }
+}
