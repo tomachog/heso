@@ -1,10 +1,14 @@
 /* base */
+
 @use "base/reset";
 @use "base/body"; 
 /* components */
+
 @use "components/adbar";
 @use "components/gallery";
 @use "components/cards";
+@use "components/bottom-socials";
+
 /* layout */
 @use "layout/header";
 @use "layout/footer";
