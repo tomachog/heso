@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRODUCTOS | HESO</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <header>
         <section class="js-adbar section-adbar">
@@ -139,7 +142,8 @@
         <nav class="navbar navbar-expand-lg p-0">
             <div class="container-fluid">
 
-                <a class="navbar-brand" href="../index.html"><img src="../img/logo/heso logo sin fondo.png" alt="Logo HESO"></a>
+                <a class="navbar-brand" href="../index.html"><img src="../img/logo/heso logo sin fondo.png"
+                        alt="Logo HESO"></a>
 
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -215,16 +219,102 @@
         </nav>
     </header>
 
-    <main>
+    <main class="container-fluid px-4 mt-5 pt-5 py-5">
+        <div class="row">
+            <aside class="col-lg-3 col-md-4 sidebar-filtros">
 
+                <div class="bloque-filtro">
+                    <a href="../index.html" class="volver-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        VOLVER
+                    </a>
+
+                    <ul class="lista-categorias">
+                        <li><a href="./productos/remeras.html">REMERAS</a></li>
+                    </ul>
+                </div>
+
+                <hr class="separador-filtro">
+
+                <div class="bloque-filtro">
+                    <h3 class="titulo-filtro">Filtrar por</h3>
+                    <h4 class="subtitulo-filtro">TALLE</h4>
+
+                    <form class="formulario-filtros">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="texto-checkbox">S <span class="cantidad">(13)</span></span>
+                        </label>
+
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="texto-checkbox">M <span class="cantidad">(13)</span></span>
+                        </label>
+
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="texto-checkbox">L <span class="cantidad">(64)</span></span>
+                        </label>
+
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="texto-checkbox">XL <span class="cantidad">(64)</span></span>
+                        </label>
+                    </form>
+                </div>
+            </aside>
+
+
+            <section class="col-lg-9 col-md-8 contenedor-seccion" style="padding-top: 0;">
+
+                <h2 class="titulo-seccion" style="text-align: left;">PRODUCTOS</h2>
+
+                <div class="galeria-productos" style="justify-content: flex-start;">
+
+
+                    <article class="card-producto">
+                        <figure>
+                            <img src="../img/producto/post ejemplo.png" alt="Remera 1">
+                        </figure>
+                        <figcaption>
+                            <h3>REMERA 1</h3>
+                            <a href="#">Comprar</a>
+                            <a href="#">Agregar al carrito</a>
+                        </figcaption>
+                    </article>
+
+
+                    <article class="card-producto">
+                        <figure>
+                            <img src="../img/producto/post ejemplo.png" alt="Remera 2">
+                        </figure>
+                        <figcaption>
+                            <h3>REMERA 2</h3>
+                            <a href="#">Comprar</a>
+                            <a href="#">Agregar al carrito</a>
+                        </figcaption>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
     </main>
 
     <footer>
-    
+
         <section class="section-footer">
-    
+
             <div class="div-footer">
-    
+
                 <div class="div-familia">
                     <h2>UNETE A LA FAMILIA HESO</h2>
                     <p>Registrate y recibí nuestras ofertas.</p>
@@ -234,7 +324,7 @@
                         <input type="submit" value="Enviar">
                     </form>
                 </div>
-    
+
                 <div class="div-menu-redes">
                     <div class="div-menu">
                         <nav>
@@ -246,7 +336,7 @@
                             </ul>
                         </nav>
                     </div>
-    
+
                     <div class="div-contacto">
                         <h3>contacto</h3>
                         <ul>
@@ -255,14 +345,14 @@
                             <li>hesoestudio@gmail.com</li>
                         </ul>
                     </div>
-    
+
                     <div class="div-info">
                         <h3>informacion</h3>
                         <ul>
                             <li><a href="#">Politica de devolucion</a></li>
                         </ul>
                     </div>
-    
+
                     <div class="div-redes">
                         <div class="social-login-icons">
                             <div class="socialcontainer">
@@ -320,17 +410,18 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
                 </div>
-    
+
             </div>
-    
+
         </section>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

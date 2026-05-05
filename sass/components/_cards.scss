@@ -126,3 +126,21 @@
         }
     }
 }
+
+
+
+.contenedor-seccion {
+    padding: 0 0 4rem 0; 
+
+    .titulo-seccion {
+        text-align: left; 
+        
+    }
+}
+
+.galeria-productos {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
+}

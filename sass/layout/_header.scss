@@ -145,18 +145,15 @@
     }
 
     .search-btn {
-        background-color: $color-text-primary; 
+        background-color: $color-black; 
         border: none;
         padding: 0.6rem 1.2rem;
-        color: $color-black; 
+        color: $color-text-primary; 
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        &:hover {
-            background-color: white;
-            color: $color-black;
-        }
+        
     }
 }

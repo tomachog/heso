@@ -1,0 +1,186 @@
+// sass/components/_filters.scss
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.sidebar-filtros {
+    color: white;
+    padding-right: 2rem;
+    margin-bottom: 3rem; // Espacio extra en celulares antes de los productos
+
+    .bloque-filtro {
+        margin-bottom: 2rem;
+    }
+
+    // Botón de "< NEW"
+    .volver-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 1.5rem;
+        @include transition-standard;
+
+        &:hover {
+            color: $color-text-primary;
+            transform: translateX(-5px); // Se mueve sutilmente a la izquierda
+        }
+    }
+
+    // Lista de categorías textuales
+    .lista-categorias {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem 0;
+
+        li {
+            margin-bottom: 1rem;
+
+            a {
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+                font-weight: 500;
+                letter-spacing: 1px;
+                @include transition-standard;
+
+                &:hover {
+                    color: $color-text-primary;
+                    padding-left: 5px; // Se desplaza un poquito al pasar el mouse
+                }
+            }
+        }
+    }
+
+    // Botones de "Ver Más" / "Ver Todos"
+    .btn-ver-mas {
+        background-color: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 0.6rem 1.2rem;
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        cursor: pointer;
+        @include transition-standard;
+
+        &:hover {
+            border-color: $color-text-primary;
+            color: $color-text-primary;
+        }
+    }
+
+    // Línea divisoria
+    .separador-filtro {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 2rem 0;
+    }
+
+    // Títulos de la sección de filtros
+    .titulo-filtro {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .subtitulo-filtro {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 1rem;
+    }
+
+    // --- MAGIA: CHECKBOXES PERSONALIZADOS ---
+    .formulario-filtros {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        @include transition-standard;
+
+        // Ocultar el checkbox nativo del navegador
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            // ESTADO ACTIVO: Cuando el usuario hace click
+            &:checked~.checkmark {
+                background-color: $color-text-primary;
+                border-color: $color-text-primary;
+
+                &:after {
+                    display: block; // Muestra la palomita (tilde)
+                }
+            }
+        }
+
+        // El nuevo cuadradito visual
+        .checkmark {
+            height: 18px;
+            width: 18px;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            margin-right: 12px;
+            position: relative;
+            @include transition-standard;
+
+            // La palomita (tilde) construida con CSS
+            &:after {
+                content: "";
+                position: absolute;
+                display: none; // Oculta por defecto
+                left: 5px;
+                top: 2px;
+                width: 5px;
+                height: 10px;
+                border: solid $color-black; // Palomita negra sobre fondo verde
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        // Estilo del texto "S (64)"
+        .texto-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+
+            .cantidad {
+                color: rgba(255, 255, 255, 0.3);
+                font-size: 0.75rem;
+            }
+        }
+
+        // Hover effect en el texto y cuadradito
+        &:hover {
+            .texto-checkbox {
+                color: white;
+            }
+
+            .checkmark {
+                border-color: $color-text-primary;
+            }
+        }
+    }
+}

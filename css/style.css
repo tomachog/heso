@@ -211,6 +211,20 @@ body {
   color: #c1ff72;
 }
 
+.contenedor-seccion {
+  padding: 0 0 4rem 0;
+}
+.contenedor-seccion .titulo-seccion {
+  text-align: left;
+}
+
+.galeria-productos {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
 .social-login-icons {
   display: flex;
   align-items: center;
@@ -288,6 +302,152 @@ body {
 
 .socialcontainer:hover .social-icon-4 {
   transform: translateY(-50px);
+}
+
+.sidebar-filtros {
+  color: white;
+  padding-right: 2rem;
+  margin-bottom: 3rem;
+}
+.sidebar-filtros .bloque-filtro {
+  margin-bottom: 2rem;
+}
+.sidebar-filtros .volver-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-filtros .volver-link:hover {
+  color: #c1ff72;
+  transform: translateX(-5px);
+}
+.sidebar-filtros .lista-categorias {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+.sidebar-filtros .lista-categorias li {
+  margin-bottom: 1rem;
+}
+.sidebar-filtros .lista-categorias li a {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-filtros .lista-categorias li a:hover {
+  color: #c1ff72;
+  padding-left: 5px;
+}
+.sidebar-filtros .btn-ver-mas {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.6rem 1.2rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-filtros .btn-ver-mas:hover {
+  border-color: #c1ff72;
+  color: #c1ff72;
+}
+.sidebar-filtros .separador-filtro {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 2rem 0;
+}
+.sidebar-filtros .titulo-filtro {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.sidebar-filtros .subtitulo-filtro {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+}
+.sidebar-filtros .formulario-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.sidebar-filtros .checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-filtros .checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.sidebar-filtros .checkbox-container input:checked ~ .checkmark {
+  background-color: #c1ff72;
+  border-color: #c1ff72;
+}
+.sidebar-filtros .checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+.sidebar-filtros .checkbox-container .checkmark {
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  margin-right: 12px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.sidebar-filtros .checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #000000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.sidebar-filtros .checkbox-container .texto-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 1px;
+}
+.sidebar-filtros .checkbox-container .texto-checkbox .cantidad {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.75rem;
+}
+.sidebar-filtros .checkbox-container:hover .texto-checkbox {
+  color: white;
+}
+.sidebar-filtros .checkbox-container:hover .checkmark {
+  border-color: #c1ff72;
 }
 
 /* layout */
@@ -428,18 +588,14 @@ body {
   -webkit-text-fill-color: white !important;
 }
 .search-heso-form .search-btn {
-  background-color: #c1ff72;
+  background-color: #000000;
   border: none;
   padding: 0.6rem 1.2rem;
-  color: #000000;
+  color: #c1ff72;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.search-heso-form .search-btn:hover {
-  background-color: white;
-  color: #000000;
 }
 
 footer {
