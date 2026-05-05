@@ -1,0 +1,57 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.galeri-bost{
+    width: 100%;
+    background-color: $color-black;
+
+    .carrusel-inner{
+        height: 60vh;
+        min-height: 400px;
+        max-height: 650px;
+    }
+
+    .carrusel-item{
+        height: 100%;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.carrusel-control-prev,
+.carrusel-control-next{
+    @include transition-standard;
+    opacity: 0.7;
+
+    &:hover{
+        opacity: 1;
+        filter: drop-shadow(0 0 8px $color-text-primary);
+    }
+}
+
+.carrusel-indicators{
+    margin-bottom: 2rem;
+
+    button{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid transparent;
+
+        &.active{
+            background-color: $color-text-primary;
+            transform: scale(1.2);
+            box-shadow: 0 0 10px rgba($color-text-primary, 0.6);
+        }
+
+        &:hover{
+            background-color: rgba($color-text-primary, 0.8);
+        }
+    }
+}

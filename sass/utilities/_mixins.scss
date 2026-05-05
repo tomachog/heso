@@ -1,0 +1,20 @@
+@mixin transition-standard{
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin hover-underline($color){
+    position: relative;
+    &::after{
+        content:'';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: $color;
+        @include transition-standard;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+}

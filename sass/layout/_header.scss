@@ -1,0 +1,82 @@
+@use "../utilities/extends" as *;
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+
+.navbar{
+    background-color: $color-black;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba($color-text-primary, 0.1);
+    gap: 1rem;
+
+    .navbar-brand{
+        img{
+            max-height: 70px;
+            @include transition-standard;
+            &:hover{
+                filter: drop-shadow(0 0 8px $color-text-primary);
+            }
+        }
+    }
+
+    .nav-link{
+        @extend %nav-link-base;
+        color: rgba(255, 255, 255, 0.8) !important;
+        @include hover-underline($color-text-primary);
+
+        &:hover, &.active{
+            color: $color-text-primary !important;
+        }
+    }
+
+    .dropdown-menu{
+        background-color: $color-black;
+        border: 1px solid $color-text-primary;
+        border-radius: 0;
+        margin-top: 10px;
+
+        .dropdown-item{
+            color: white;
+            font-weight: 500;
+            @include transition-standard;
+
+            &:hover{
+                background-color: $color-text-primary;
+                color: $color-black;
+            }
+        }
+    }
+}
+
+
+.navbar {
+    position: fixed !important;
+    top: 40px !important;
+    left: 0;
+    width: 100%;
+    margin-top: 0 !important;
+    z-index: 1040;
+    
+    background-color: $color-black;
+    border-top: none;
+
+    .navbar-toggler{
+        border-color: $color-text-primary;
+        border-radius: 4px;
+        padding: 0.5rem;
+
+        &:focus{
+            box-shadow: 0 0 8px rgba($color-text-primary, 0.5);
+            outline: none;
+        }
+
+        .navbar-toggler-icon{
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23c1ff72' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    }
+}
+
+.navbar {
+    top: $adbar-height;
+}
+

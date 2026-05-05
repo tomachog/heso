@@ -1,0 +1,10 @@
+/* base */
+@use "base/reset";
+@use "base/body"; 
+/* components */
+@use "components/adbar";
+@use "components/gallery";
+@use "components/cards";
+/* layout */
+@use "layout/header";
+@use "layout/footer";

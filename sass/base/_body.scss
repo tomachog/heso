@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *;
+
+body{
+    background-color: $color-black;
+    padding-top: 100px;
+}
