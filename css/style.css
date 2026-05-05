@@ -217,7 +217,7 @@ body {
   gap: 1rem;
 }
 .navbar .navbar-brand img {
-  max-height: 70px;
+  max-height: 110px;
   transition: all 0.3s ease-in-out;
 }
 .navbar .navbar-brand img:hover {
