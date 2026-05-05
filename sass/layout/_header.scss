@@ -101,23 +101,23 @@
     }
 }
 
-// --- Buscador Estilo HESO ---
+
 .search-heso-form {
     display: flex;
     align-items: center;
     background-color: $color-black; 
-    border: 1px solid rgba($color-text-primary, 0.5); // Borde verde
+    border: 1px solid rgba($color-text-primary, 0.5); 
     width: 100%;
     margin: 1rem 0; 
     @include transition-standard;
 
-    // Comportamiento en pantallas de PC
+
     @media (min-width: 992px) {
         max-width: 450px; 
         margin: 0 2rem; 
     }
 
-    // Efecto neón al hacer clic para escribir
+    
     &:focus-within {
         border-color: $color-text-primary;
         box-shadow: 0 0 12px rgba($color-text-primary, 0.2);
@@ -125,9 +125,9 @@
 
     .search-input {
         flex-grow: 1;
-        background-color: transparent !important; // Forzamos a quitar el fondo blanco
+        background-color: transparent !important; 
         border: none;
-        color: white; // Texto que escribe el usuario en blanco
+        color: white; 
         padding: 0.6rem 1rem;
         outline: none;
 
@@ -137,7 +137,7 @@
             letter-spacing: 1px;
         }
         
-        // Evita que Chrome le ponga fondo amarillo/blanco al autocompletar
+        
         &:-webkit-autofill {
             -webkit-box-shadow: 0 0 0 30px $color-black inset !important;
             -webkit-text-fill-color: white !important;
@@ -145,10 +145,10 @@
     }
 
     .search-btn {
-        background-color: $color-text-primary; // Botón verde
+        background-color: $color-text-primary; 
         border: none;
         padding: 0.6rem 1.2rem;
-        color: $color-black; // Lupa negra
+        color: $color-black; 
         cursor: pointer;
         display: flex;
         align-items: center;

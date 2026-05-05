@@ -105,18 +105,34 @@ body {
   background-color: rgba(193, 255, 114, 0.8);
 }
 
+.contenedor-seccion {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contenedor-seccion .titulo-seccion {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 .galeria-productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 
 .card-producto {
   background-color: #000000;
+  width: 100%;
+  max-width: 300px;
   border: 1px solid rgba(193, 255, 114, 0.2);
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   transition: all 0.3s ease-in-out;
 }
 .card-producto:hover {
@@ -126,27 +142,8 @@ body {
 .card-producto:hover figure img {
   transform: scale(1.05);
 }
-.card-producto h2 {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: #c1ff72;
-  color: #000000;
-  font-size: 0.8rem;
-  font-weight: 800;
-  padding: 5px 12px;
-  margin: 0;
-  text-overflow: uppercase;
-  letter-spacing: 2px;
-  z-index: 2;
-  border: 2px solid #000000;
-}
-.card-producto .div-producto {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 .card-producto figure {
+  position: relative;
   margin: 0;
   overflow: hidden;
   background-color: #111;
@@ -157,6 +154,19 @@ body {
   object-fit: cover;
   transition: all 0.3s ease-in-out;
 }
+.card-producto figure .badge-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #c1ff72;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 5px 12px;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  z-index: 2;
+}
 .card-producto figcaption {
   padding: 1.5rem;
   display: flex;
@@ -166,11 +176,11 @@ body {
 }
 .card-producto figcaption h3 {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
   margin: 0;
+  text-align: center;
 }
 .card-producto figcaption a {
   text-align: center;
@@ -179,7 +189,6 @@ body {
   font-size: 0.9rem;
   text-transform: uppercase;
   padding: 12px;
-  letter-spacing: 1px;
   transition: all 0.3s ease-in-out;
   display: block;
 }
