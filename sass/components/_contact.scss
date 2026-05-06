@@ -1,0 +1,134 @@
+@use "../utilities/mixins" as *;
+@use "../utilities/variables" as *;
+
+.section-form{
+    padding: 5rem 2rem;
+    background-color: $color-black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2{
+        font-size: 2.2rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: white;
+
+        position:relative;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            height: 4px;
+            background-color: $color-text-primary;
+        }
+    }
+
+    .div-form{
+        width: 100%;
+        max-width: 600px;
+        background-color: black;
+        padding: 3rem 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .form-contacto{
+        fieldset{
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        label{
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+
+            &:first-of-type{
+                margin-top: 0;
+            }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"]{
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.8rem 0;
+            font-size: 1rem;
+            outline: none;
+            @include transition-standard;
+
+
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.2);
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            &:focus{
+                border-bottom-color: $color-text-primary;
+                box-shadow: 0 4px 10px -8px $color-text-primary;
+            }
+        }
+
+        textarea{
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem;
+            font-size: 1rem;
+            outline: none;
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+            @include transition-standard;
+
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.2);
+                text-transform: uppercase;
+                font-size: 0.85rem;
+            }
+
+            &:focus{
+                border-color: $color-text-primary;
+                background-color: transparent;
+                box-shadow: 0 0 15px rgba($color-text-primary, 0.1);
+            }
+        }
+
+        input[type="submit"]{
+            width: 100%;
+            margin-top: 2.5rem;
+            background-color: $color-text-primary;
+            color: $color-black;
+            border: 1px solid $color-text-primary;
+            padding: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            @include transition-standard;
+
+            &:hover{
+                background-color: transparent;
+                color: $color-text-primary;
+            }
+        }
+    }
+}
