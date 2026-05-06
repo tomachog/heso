@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* base */
 * {
   box-sizing: border-box;
@@ -567,6 +568,217 @@ body {
 .section-form .form-contacto input[type=submit]:hover {
   background-color: transparent;
   color: #c1ff72;
+}
+
+.login-section {
+  min-height: calc(100vh - 150px);
+  padding-top: 150px;
+  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.wrapper {
+  --input-focus: #c1ff72;
+  --font-color: #ffffff;
+  --font-color-sub: rgba(255, 255, 255, 0.5);
+  --bg-color: #0d0d0d;
+  --main-color: #c1ff72;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.toggle {
+  display: none;
+}
+
+/* El interruptor (Switch) */
+.switch {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.card-side::before {
+  position: absolute;
+  content: "Iniciar Sesión";
+  right: 60px;
+  top: 0;
+  white-space: nowrap;
+  text-decoration: underline;
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.card-side::after {
+  position: absolute;
+  content: "Registrarse";
+  left: 60px;
+  top: 0;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.slider {
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.slider:before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  left: -2px;
+  bottom: -2px;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 0 var(--main-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.toggle:checked ~ .switch .slider {
+  background-color: var(--input-focus);
+}
+
+.toggle:checked ~ .switch .slider:before {
+  transform: translateX(30px);
+}
+
+.toggle:checked ~ .switch .card-side:before {
+  text-decoration: none;
+}
+
+.toggle:checked ~ .switch .card-side:after {
+  text-decoration: underline;
+}
+
+/* La Tarjeta 3D */
+.flip-card__inner {
+  width: 320px;
+  height: 420px;
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.toggle:checked ~ .flip-card__inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card__front, .flip-card__back {
+  padding: 30px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: var(--bg-color);
+  border-radius: 0;
+  border: 2px solid var(--main-color);
+  box-shadow: 8px 8px var(--main-color);
+}
+
+.flip-card__back {
+  transform: rotateY(180deg) !important;
+}
+
+.flip-card__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--main-color);
+}
+
+.flip-card__input {
+  width: 100%;
+  max-width: 260px;
+  height: 45px;
+  border-radius: 0;
+  border: 1px solid rgba(193, 255, 114, 0.5);
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 15px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+.flip-card__input::placeholder {
+  color: var(--font-color-sub);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.flip-card__input:focus {
+  border: 1px solid var(--input-focus);
+  box-shadow: 0 0 10px rgba(193, 255, 114, 0.2);
+}
+
+.flip-card__btn {
+  margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 260px;
+  height: 45px;
+  border-radius: 0;
+  border: 2px solid var(--main-color);
+  background-color: var(--main-color);
+  color: #000000;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.flip-card__btn:hover {
+  background-color: transparent;
+  color: var(--main-color);
+}
+.flip-card__btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
 }
 
 /* layout */

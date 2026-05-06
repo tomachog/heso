@@ -222,7 +222,45 @@
     </header>
 
     <main>
+        <section class="login-section">
+            <div class="wrapper">
 
+                <!-- 1. El checkbox oculto que controla el giro -->
+                <input type="checkbox" class="toggle" id="login-toggle">
+
+                <!-- 2. El interruptor visual (Switch) -->
+                <label class="switch" for="login-toggle">
+                    <span class="slider"></span>
+                    <span class="card-side"></span>
+                </label>
+
+                <!-- 3. La Tarjeta 3D -->
+                <div class="flip-card__inner">
+
+                    <!-- Lado LOGIN (Frente) -->
+                    <div class="flip-card__front">
+                        <div class="title">INICIAR SESIÓN</div>
+                        <form class="flip-card__form" action="">
+                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                            <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
+                            <button class="flip-card__btn">VAMOS!</button>
+                        </form>
+                    </div>
+
+                    <!-- Lado SIGN UP (Atrás) -->
+                    <div class="flip-card__back">
+                        <div class="title">REGISTRARSE</div>
+                        <form class="flip-card__form" action="">
+                            <input class="flip-card__input" placeholder="Nombre" type="text">
+                            <input class="flip-card__input" name="email" placeholder="Email" type="email">
+                            <input class="flip-card__input" name="password" placeholder="Contraseña" type="password">
+                            <button class="flip-card__btn">CONFIRMAR!</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -339,4 +377,5 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
