@@ -781,6 +781,164 @@ body {
   box-shadow: none;
 }
 
+.cart-section {
+  color: white;
+  padding-bottom: 5rem;
+}
+.cart-section .cart-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #c1ff72;
+}
+.cart-section .cart-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.cart-section .cart-item:hover {
+  border-color: rgba(193, 255, 114, 0.5);
+}
+.cart-section .cart-item .cart-item-img {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  background-color: #111;
+}
+.cart-section .cart-item .cart-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.cart-section .cart-item .cart-item-details .cart-item-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+.cart-section .cart-item .cart-item-details .cart-item-price {
+  color: #c1ff72;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions .quantity-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions .quantity-control .qty-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions .quantity-control .qty-btn:hover {
+  color: #c1ff72;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions .quantity-control .qty-input {
+  width: 40px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  color: white;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  -moz-appearance: textfield;
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions .remove-btn {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cart-section .cart-item .cart-item-details .cart-item-actions .remove-btn:hover {
+  color: #ff4444;
+}
+.cart-section .cart-summary {
+  background-color: #0d0d0d;
+  border: 1px solid #c1ff72;
+  padding: 2rem;
+  position: sticky;
+  top: 150px;
+}
+.cart-section .cart-summary h3 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(193, 255, 114, 0.3);
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+.cart-section .cart-summary .summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.cart-section .cart-summary .summary-row.total {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #c1ff72;
+}
+.cart-section .cart-summary .summary-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+  margin: 1.5rem 0;
+}
+.cart-section .cart-summary .checkout-btn {
+  width: 100%;
+  background-color: #c1ff72;
+  color: #000000;
+  border: 1px solid #c1ff72;
+  padding: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.cart-section .cart-summary .checkout-btn:hover {
+  background-color: transparent;
+  color: #c1ff72;
+}
+.cart-section .cart-summary .continue-shopping {
+  display: block;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+.cart-section .cart-summary .continue-shopping:hover {
+  color: white;
+  text-decoration: underline;
+}
+
 /* layout */
 .navbar .nav-link {
   font-weight: 700;

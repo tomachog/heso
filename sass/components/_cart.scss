@@ -1,0 +1,189 @@
+// sass/components/_cart.scss
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.cart-section {
+    color: white;
+    padding-bottom: 5rem;
+
+    .cart-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: $color-text-primary; // Título en Verde Neón
+    }
+
+    // --- Tarjeta de cada producto en el carrito ---
+    .cart-item {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        background-color: #0d0d0d;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 1.5rem;
+        @include transition-standard;
+
+        &:hover {
+            border-color: rgba($color-text-primary, 0.5);
+        }
+
+        .cart-item-img {
+            width: 120px;
+            height: 150px;
+            object-fit: cover;
+            background-color: #111;
+        }
+
+        .cart-item-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+
+            .cart-item-title {
+                font-size: 1.2rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            .cart-item-price {
+                color: $color-text-primary;
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin: 0.5rem 0;
+            }
+
+            .cart-item-actions {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                // Controles de Sumar/Restar cantidad
+                .quantity-control {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+
+                    .qty-btn {
+                        background: transparent;
+                        color: white;
+                        border: none;
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+                        font-weight: bold;
+                        @include transition-standard;
+
+                        &:hover {
+                            color: $color-text-primary;
+                            background-color: rgba(255, 255, 255, 0.05);
+                        }
+                    }
+
+                    .qty-input {
+                        width: 40px;
+                        text-align: center;
+                        background: transparent;
+                        border: none;
+                        color: white;
+                        border-left: 1px solid rgba(255, 255, 255, 0.3);
+                        border-right: 1px solid rgba(255, 255, 255, 0.3);
+                        -moz-appearance: textfield; // Quita las flechitas por defecto
+                    }
+                }
+
+                // Botón Eliminar
+                .remove-btn {
+                    background: transparent;
+                    color: rgba(255, 255, 255, 0.5);
+                    border: none;
+                    text-decoration: underline;
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    cursor: pointer;
+                    @include transition-standard;
+
+                    &:hover {
+                        color: #ff4444; // Se pone rojo al pasar el mouse
+                    }
+                }
+            }
+        }
+    }
+
+    // --- Caja de Resumen de Pago ---
+    .cart-summary {
+        background-color: #0d0d0d;
+        border: 1px solid $color-text-primary; // Borde Verde para destacar
+        padding: 2rem;
+        position: sticky; // Si la lista es larga, esto se queda pegado en la pantalla
+        top: 150px; 
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba($color-text-primary, 0.3);
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+
+            &.total {
+                font-size: 1.3rem;
+                font-weight: 800;
+                color: $color-text-primary;
+            }
+        }
+
+        .summary-divider {
+            border-color: rgba(255, 255, 255, 0.1);
+            margin: 1.5rem 0;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background-color: $color-text-primary;
+            color: $color-black;
+            border: 1px solid $color-text-primary;
+            padding: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 1rem;
+            cursor: pointer;
+            @include transition-standard;
+
+            &:hover {
+                background-color: transparent;
+                color: $color-text-primary;
+            }
+        }
+
+        .continue-shopping {
+            display: block;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+
+            &:hover {
+                color: white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
