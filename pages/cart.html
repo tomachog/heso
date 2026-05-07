@@ -209,7 +209,7 @@
                                     <line x1="3" y1="6" x2="21" y2="6"></line>
                                     <path d="M16 10a4 4 0 0 1-8 0"></path>
                                 </svg>
-                                <span>Carrito (0)</span>
+                                <span id="cart-count">Carrito (0)</span>
                             </a>
                         </li>
                     </ul>
@@ -228,27 +228,6 @@
                 <!-- LISTA DE PRODUCTOS (Lado Izquierdo) -->
                 <!-- Aquí JavaScript inyectará los productos automáticamente -->
                 <div class="col-lg-7 cart-items-container" id="cart-container">
-
-                    <!-- EJEMPLO DE CÓMO SE VERÁ UN PRODUCTO (Maquetación) -->
-                    <!-- Una vez que pongas el JS, puedes borrar este bloque de ejemplo -->
-                    <div class="cart-item">
-                        <img src="../img/producto/post ejemplo.png" alt="Remera" class="cart-item-img">
-                        <div class="cart-item-details">
-                            <h3 class="cart-item-title">REMERA CUSTOM HESO</h3>
-                            <p class="cart-item-price">$45.000</p>
-
-                            <div class="cart-item-actions">
-                                <div class="quantity-control">
-                                    <button class="qty-btn minus">-</button>
-                                    <input type="number" value="1" class="qty-input" readonly>
-                                    <button class="qty-btn plus">+</button>
-                                </div>
-                                <!-- Botón de eliminar -->
-                                <button class="remove-btn">ELIMINAR</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Fin del ejemplo -->
 
                 </div>
 
@@ -395,6 +374,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../js/cart.js"></script>
 </body>
-
 </html>

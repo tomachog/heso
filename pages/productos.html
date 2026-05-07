@@ -201,7 +201,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link d-flex align-items-center gap-2" href="#">
+                            <a class="nav-link d-flex align-items-center gap-2" href="./cart.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round">
@@ -209,7 +209,7 @@
                                     <line x1="3" y1="6" x2="21" y2="6"></line>
                                     <path d="M16 10a4 4 0 0 1-8 0"></path>
                                 </svg>
-                                <span>Carrito (0)</span>
+                                <span id="cart-count">Carrito (0)</span>
                             </a>
                         </li>
                     </ul>
@@ -286,8 +286,8 @@
                         </figure>
                         <figcaption>
                             <h3>REMERA 1</h3>
-                            <a href="#">Comprar</a>
-                            <a href="#">Agregar al carrito</a>
+                            <a href="./cart.html" class="buy-now-btn" data-id="prod-1" data-title="REMERA 1" data-price="45000" data-image="../img/producto/post ejemplo.png">Comprar</a>
+                            <a href="#" class="add-to-cart-btn" data-id="prod-1" data-title="REMERA 1" data-price="45000" data-image="../img/producto/post ejemplo.png">Agregar al carrito</a>
                         </figcaption>
                     </article>
 
@@ -298,8 +298,8 @@
                         </figure>
                         <figcaption>
                             <h3>REMERA 2</h3>
-                            <a href="#">Comprar</a>
-                            <a href="#">Agregar al carrito</a>
+                            <a href="./cart.html" class="buy-now-btn" data-id="prod-2" data-title="REMERA 2" data-price="45000" data-image="../img/producto/post ejemplo.png">Comprar</a>
+                            <a href="#" class="add-to-cart-btn" data-id="prod-2" data-title="REMERA 2" data-price="45000" data-image="../img/producto/post ejemplo.png">Agregar al carrito</a>
                         </figcaption>
                     </article>
 
@@ -422,6 +422,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>
+</content>
