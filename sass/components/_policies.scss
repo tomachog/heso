@@ -1,0 +1,114 @@
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+.policy-section {
+    background-color: $color-black;
+    color: white;
+    padding-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+
+    .policy-container {
+        width: 100%;
+        max-width: 800px; // Mantiene el texto estrecho para que sea fácil de leer
+        background-color: #0d0d0d; // Un negro un poco más claro para separar del fondo
+        border: 1px solid rgba(193, 255, 114, 0.2); // Borde verde muy sutil
+        padding: 3rem;
+        
+        @media (max-width: 768px) {
+            padding: 2rem 1.5rem; // Menos padding en celulares
+        }
+    }
+
+    .policy-title {
+        font-size: 2rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: $color-text-primary; // Título en Verde Neón
+        margin-bottom: 1rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1rem;
+    }
+
+    .policy-intro {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+    }
+
+    .policy-block {
+        margin-bottom: 2.5rem;
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            color: white;
+            display: inline-block;
+            // Un toque de diseño: fondo verde sutil detrás del título
+            box-shadow: inset 0 -8px 0 rgba(193, 255, 114, 0.3); 
+        }
+
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+
+            strong {
+                color: white;
+            }
+        }
+
+        // Estilos para las listas (Viñetas personalizadas)
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+
+            li {
+                color: rgba(255, 255, 255, 0.7);
+                line-height: 1.7;
+                margin-bottom: 0.8rem;
+                font-size: 0.95rem;
+
+                strong {
+                    color: $color-text-primary; // Resaltamos los casos (defectuoso/gusto) en verde
+                }
+            }
+        }
+
+        // Convertimos los puntitos normales en cuadrados verde neón estilo brutalista
+        ul {
+            list-style: none;
+            
+            li {
+                position: relative;
+                
+                &::before {
+                    content: '';
+                    position: absolute;
+                    left: -1.5rem;
+                    top: 0.5rem;
+                    width: 6px;
+                    height: 6px;
+                    background-color: $color-text-primary;
+                }
+            }
+        }
+
+        // Para la lista numerada del proceso de devolución
+        ol {
+            li {
+                padding-left: 0.5rem;
+                
+                &::marker {
+                    color: $color-text-primary;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}

@@ -938,6 +938,98 @@ body {
   text-decoration: underline;
 }
 
+.policy-section {
+  background-color: #000000;
+  color: white;
+  padding-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.policy-section .policy-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #0d0d0d;
+  border: 1px solid rgba(193, 255, 114, 0.2);
+  padding: 3rem;
+}
+@media (max-width: 768px) {
+  .policy-section .policy-container {
+    padding: 2rem 1.5rem;
+  }
+}
+.policy-section .policy-title {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #c1ff72;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+.policy-section .policy-intro {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+.policy-section .policy-block {
+  margin-bottom: 2.5rem;
+}
+.policy-section .policy-block h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: white;
+  display: inline-block;
+  box-shadow: inset 0 -8px 0 rgba(193, 255, 114, 0.3);
+}
+.policy-section .policy-block p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.policy-section .policy-block p strong {
+  color: white;
+}
+.policy-section .policy-block ul, .policy-section .policy-block ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+.policy-section .policy-block ul li, .policy-section .policy-block ol li {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+.policy-section .policy-block ul li strong, .policy-section .policy-block ol li strong {
+  color: #c1ff72;
+}
+.policy-section .policy-block ul {
+  list-style: none;
+}
+.policy-section .policy-block ul li {
+  position: relative;
+}
+.policy-section .policy-block ul li::before {
+  content: "";
+  position: absolute;
+  left: -1.5rem;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  background-color: #c1ff72;
+}
+.policy-section .policy-block ol li {
+  padding-left: 0.5rem;
+}
+.policy-section .policy-block ol li::marker {
+  color: #c1ff72;
+  font-weight: 800;
+}
+
 /* layout */
 .navbar .nav-link {
   font-weight: 700;
